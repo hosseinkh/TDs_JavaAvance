@@ -1,0 +1,81 @@
+2) System.out.println() s'affiche
+
+3) La méthode toString se crée
+
+4) La méthode main se crée
+
+5) Les méthode set et get apparaissent. La méthode setFoo se crée
+
+6) On nous propose de renommer en refactor le nom de la classe.
+Pareil pour foo on peut renommer foo partout ou il est utilisé
+
+7) On peut regarder l'implémentation de la classe et la déclaration
+
+Ex 2
+
+1) Car on utilise le constructeur par défaut
+
+2) ça ne marche pas car les attribut sont privés et nous sommes dans
+une autre classe. On peut implémenter des getters dans la classe Point
+
+3) C'est important pour ne pas modifier le comportement de l'objet et
+occasionner des bugs
+
+4) Un accesseur permet de récupérer la valeur d'un attribut sans y accéder
+directement. Oui on en a besoin pour TestPoint
+
+5) Le problème est que l'on à crée un constructeur, donc le constructeur
+par défaut n'est plus disponible
+
+7) On peut créer une variable statique nbPointCrees que l'on incrémente
+dans le constructeur pour chaque nouveau point 
+
+8) Le compilateur devine grâce au nombre d'arguments, a leur type et
+grâce à l'ordre
+
+Ex 3
+
+1) true, false. Car on donne à p2 la meme adresse que p1 donc ils référencent
+le même objet, p3 lui est un nouvel objet, il a donc une référence différente.
+
+3) Comme p1 et p2 référencent le même objet et que p1 est ajouté à la liste
+en premier il est a l'indice 0. Par contre p3 n'est pas ajouté donc indexOf
+retourne -1 pour un objet qui n'est pas dans la liste. Il faut implémenter
+equals car indexOf utilise cette méthode pour voir si les objets sont identiques.
+
+Ex 4
+
+2) Une ArrayIndexOutOfBounds exception se déclenchera étant donné qu'on
+voudra accéder à un indice qui n'existe pas. On pourrait tester la taille
+du tableau avant de l'ajouter
+
+5) On aura une NullPointerException. De même car le tableau est de type
+point et non null.
+
+6) pointCapacity : on peut la supprimer car c'est un tableau dynamique
+à taille non limitée , nbPoints : on retourne points.size() et pour
+contains : une méthode contains existe déjà pour la linkedlist, on 
+à simplement à l'appeler.
+
+Ex 5 
+
+1)		x += dx;
+		y += dy;
+
+5) Le problème vient du point que l'on donne pour les deux cercles.
+Ils partagent la même référence, dans translate, il faudrait rendre
+l'objet non mutable en retournant un nouveau point pour ne le modifier qu'une seule fois.
+
+6) Le problème serait le même qu'avant, on pourrait modifier le point
+via translate, il faudrait renvoyer un nouveau point pour garder l'aspect
+non mutable.
+
+Ex 6
+
+1) Non, il vaut mieux passer Circle en attribut
+
+4) Il va afficher l'adresse de l'objet.
+
+
+
+
