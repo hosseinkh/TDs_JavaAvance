@@ -6,7 +6,7 @@ public class Circle {
 	private Point center;
 
 	public Circle(Point center, double radius) {
-		super();
+		super(); // C'est quoi super? Est ce qu'il y a un héritage ici?
 		this.center = center;
 		this.radius = radius;
 	}
